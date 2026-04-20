@@ -19,11 +19,12 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
 
-    const res = signIn("credentials", {
+    const res =await signIn("credentials", {
       email,
       password,
       redirect: false,
     });
+    console.log(res)
     setLoading(false);
     if (res.error) return setError(res.error);
     router.push("/");

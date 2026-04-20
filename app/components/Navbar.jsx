@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import SearchBar from "./SearchBar";
+import SignOut from "./SignOut";
+import ProfileButton from "./Profile";
 
 export default function Navbar() {
   return (
@@ -11,6 +13,8 @@ export default function Navbar() {
           CoderFlix
         </Link>
         <SearchBar></SearchBar>
+        <SignOut></SignOut>
+        <ProfileButton></ProfileButton>
       </div>
     </nav>
   );

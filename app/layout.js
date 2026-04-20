@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 import "./globals.css";
 import dbConnect from "@/service/dbConnect";
 import Navbar from "./components/Navbar";
-
+import SessionWrapper from "./components/SessionWrapper";
 const inter = Inter({ subsets: ["latin"] })
 
 
@@ -21,7 +21,9 @@ export default async function RootLayout({ children }) {
       className={ inter.className}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/> {children}
+        
+        <SessionWrapper>
+          <Navbar/> {children}</SessionWrapper>
        </body>
     </html>
   );
